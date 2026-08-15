@@ -16,16 +16,19 @@ const Hero = () => {
 
             {/* content */}
             <div className='absolute top-0 w-full h-[87.5vh] flex items-center 
-            justify-center text-amber-50'>
-              <h1>Plan your trips with wanderwise</h1>
+            justify-center'>
+              <div className="w-1/2 mx-auto text-center">
 
-              <p>
+              <h1 className="text-5xl font-bold text-white tracking-wide">Plan your trips with wanderwise</h1>
+
+              <p className="text-white mt-4 text-lg leading-8">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, 
                 minima! Quas sunt dolorum magni eaque, optio hic culpa reiciendis 
                 et pariatur fugiat ratione nostrum, fugit illo? Adipisci a rerum pariatur.
               </p>
 
-              <button> Get Started</button>
+              <button className="border-2 rounded-xl  px-2 py-1 bg-amber-400 text-white cursor-pointer hover:bg-green-700 m-6"> Get Started</button>
+              </div>
             </div>
         
       

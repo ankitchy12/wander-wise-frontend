@@ -1,4 +1,5 @@
 import React from 'react'
+import CustomButton from '../CustomButton'
 
 const Hero = () => {
   return (
@@ -27,7 +28,7 @@ const Hero = () => {
                 et pariatur fugiat ratione nostrum, fugit illo? Adipisci a rerum pariatur.
               </p>
 
-              <button className="border-2 rounded-xl  px-2 py-1 bg-amber-400 text-white cursor-pointer hover:bg-green-700 m-6"> Get Started</button>
+              <CustomButton text= 'Get started' />
               </div>
             </div>
         

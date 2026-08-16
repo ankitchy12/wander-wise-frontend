@@ -1,17 +1,20 @@
 import React from 'react'
 import { GlobeCheck, Handshake, Backpack, ClipboardClock } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
 
 const featuresData =[
   {
     title: "24/7 Availability",
     content: "Our website works 24/7, so you can access it anytime, anywhere.",
     icon: GlobeCheck,
+    link: "/"
   },
 
   {
     title: "Baggage Tracking",
     content: "Our website allows you to track your baggage in real-time, so you can always know where your luggage is.",
     icon: Backpack,
+    link: "/about"
     
   },
 
@@ -29,14 +32,17 @@ const featuresData =[
 
 ]
 
-const Features = () => {
+const Features = ({link}) => {
+
+  const navigate = useNavigate();
   return (
   
     <div className= " px-20 py-24 ">
         {/* heading */}
 
         <div>
-            <h2 className="text-4xl font-bold text-center ">Features</h2>
+            <h2 onClick={()=>{navigate("/feature")}} className="text-4xl font-bold 
+            text-center ">Features</h2>
 
         </div>
         
@@ -45,9 +51,10 @@ const Features = () => {
          {
             featuresData.map((feature,index)=>{
               return(
-                 <div className="border rounded p-4 border-gray-300">
+                 <div onClick={()=>{navigate(feature.link)}} className="border rounded p-4 border-gray-300">
 
-                  < feature.icon />
+                  < feature.icon size={40} 
+                  className=" text-blue-600 mb-4 "/>
 
                     <h3 className='text-xl font-bold mb-4'>{feature.title}</h3>
                     <p>{feature.content}</p>

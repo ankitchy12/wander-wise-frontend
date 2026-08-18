@@ -16,13 +16,13 @@ const tripsData =[
   },
 
   {
-    title: "Invite Collaborators",
+    title: "Ama Yangri",
     content: "Our website allows you to invite collaborators to work on your projects together.",
     image: "https://travellingnepaltips.com/wp-content/uploads/2018/02/26815069_1594937403932618_5439460490865958001_n.jpg",
   },
 
   {
-    title: "Itenirary",
+    title: "Biratnagar",
     content: "Our website allows you to create and manage your itinerary, so you can plan your trips easily.",
     image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Biratnagar_Jaljala_Chowk.jpg/250px-Biratnagar_Jaljala_Chowk.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
   }
@@ -48,7 +48,7 @@ const FamousTrips = ({link}) => {
          {
             tripsData.map((feature,index)=>{
               return(
-                 <div onClick={()=>{navigate(feature.link)}} className="border rounded p-4 border-gray-300 bg-red-50 md:bg-amber-400 lg:bg-fuchsia-400">
+                 <div onClick={()=>{navigate(feature.link)}} className="border rounded p-4 border-gray-300 bg-red-50 md:bg-amber-200 lg:bg-amber-200">
 
                   <div className='w-full h-40 overflow-hidden'>
                     <img className="w-full" src={feature.image} alt={feature.title} />

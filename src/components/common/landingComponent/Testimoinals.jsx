@@ -35,7 +35,7 @@ export default function Testimonials() {
     <section className="bg-background py-16 px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-6xl">
         <div className="mb-12 text-center">
-          <h2 className="text-3xl font-semibold tracking-tight text-foreground">
+          <h2 className="text-3xl font-semibold tracking-tight text-green-900">
             Loved by travelers
           </h2>
           <p className="mt-3 text-muted-foreground">
@@ -54,24 +54,24 @@ export default function Testimonials() {
                   <Star
                     key={index}
                     size={16}
-                    className={
+                    className={ 
                       index < testimonial.rating
-                        ? "fill-primary text-primary"
-                        : "text-muted-foreground"
+                        ? "fill-amber-400 text-amber-400"
+                        : "text-amber-400"
                     }
                   />
                 ))}
               </div>
 
               <div className="mb-6 flex items-start gap-3">
-                <Quote size={20} className="mt-1 shrink-0 text-muted-foreground" />
-                <p className="text-card-foreground leading-relaxed">
+                <Quote size={20} className="mt-1 shrink-0 text-amber-600" />
+                <p className="text-card-foreground leading-relaxed ">
                   {testimonial.quote}
                 </p>
               </div>
 
               <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-sm font-medium text-primary-foreground">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-amber-600 text-sm font-medium text-primary-foreground">
                   {testimonial.avatar}
                 </div>
                 <div>

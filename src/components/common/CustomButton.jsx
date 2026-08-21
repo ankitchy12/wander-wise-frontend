@@ -8,8 +8,8 @@ const CustomButton = ({text, className, link}) => {
 
   return (
     <div>
-      <button onClick={()=>{navigate(link)}} className={`border-2 rounded-xl  px-2 py-1 bg-amber-400
-         text-white cursor-pointer hover:bg-green-700 ${className}` }>{text}</button>
+      <button onClick={()=>{navigate(link)}} className={` rounded-4xl px-4 py-1 bg-amber-400
+         text-black cursor-pointer hover:bg-amber-200 ${className}` }>{text}</button>
     </div>
   )
 }

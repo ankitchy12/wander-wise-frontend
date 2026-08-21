@@ -6,7 +6,7 @@ const Hero = () => {
     <div className="relative">
         {/* image */}
         <div className="w-full h-[87.5vh] overflow-hidden flex items-center">
-            <img src="/heroImage.jpg" alt=" Wander wise Hero Image" 
+            <img src="/heroImage2.jpg" alt=" Wander wise Hero Image" 
             className="w-full"></img>
         </div>
 
@@ -23,12 +23,12 @@ const Hero = () => {
               <h1 className="text-5xl font-bold text-white tracking-wide">Plan your trips with wanderwise</h1>
 
               <p className="text-white mt-4 text-lg leading-8">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, 
-                minima! Quas sunt dolorum magni eaque, optio hic culpa reiciendis 
-                et pariatur fugiat ratione nostrum, fugit illo? Adipisci a rerum pariatur.
+
+                Your Journey, Our Passion
+                
               </p>
 
-              <CustomButton text= 'Get started' />
+              <CustomButton text= 'Get Started' />
               </div>
             </div>
         

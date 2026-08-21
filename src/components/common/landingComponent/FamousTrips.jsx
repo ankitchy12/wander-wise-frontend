@@ -3,9 +3,9 @@ import { useNavigate } from 'react-router-dom'
 
 const tripsData =[
   {
-    title: "Bhatbhateni",
-    content: "Our Shopping center opens 24/7, so you can access it anytime.",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcFtrUDldo2EfKRCl7bOIr4IcXW5htCluDZ1r0viGkow&s=10"
+    title: "Tillicho Lake",
+    content: "Tilicho Lake is one of the world’s highest lakes, located in Nepal’s Manang district and famous for its stunning Himalayan scenery.",
+    image: "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnfpDE5UxbV33b62w69KEGWTzaP5UiIQZy3BDu_If1v15V-s-JF-T_DbOp92c4Dl6-Vt84XuCUCUEMCSwCboxiPHmtNEQlteBVdqiD6X7yJoJds6hBpTiHkIqXhduApf_z4OCWlvfizJ9UK=s680-w680-h510-rw"
   },
 
   {
@@ -17,14 +17,14 @@ const tripsData =[
 
   {
     title: "Ama Yangri",
-    content: "Our website allows you to invite collaborators to work on your projects together.",
+    content: "Ama Yangri is a beautiful high-altitude hill in Nepal, famous for its breathtaking mountain views and peaceful natural surroundings.",
     image: "https://travellingnepaltips.com/wp-content/uploads/2018/02/26815069_1594937403932618_5439460490865958001_n.jpg",
   },
 
   {
-    title: "Biratnagar",
-    content: "Our website allows you to create and manage your itinerary, so you can plan your trips easily.",
-    image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Biratnagar_Jaljala_Chowk.jpg/250px-Biratnagar_Jaljala_Chowk.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    title: "Chitwan National Park",
+    content: "Chitwan National Park is a famous wildlife reserve in Nepal, known for its rich biodiversity and beautiful forests.",
+    image : "https://photos.smugmug.com/Asia/Nepal-travel/i-K5vRHt9/0/XL/chitwan-national-park-12-XL.jpg"
   }
 
 ]
@@ -39,7 +39,7 @@ const FamousTrips = ({link}) => {
 
         <div>
             <h2 className="text-4xl font-bold 
-            text-center ">Famous Trips</h2>
+            text-center text-green-900">Famous Trips</h2>
 
         </div>
         
@@ -48,14 +48,14 @@ const FamousTrips = ({link}) => {
          {
             tripsData.map((feature,index)=>{
               return(
-                 <div onClick={()=>{navigate(feature.link)}} className="border rounded p-4 border-gray-300 bg-red-50 md:bg-amber-200 lg:bg-amber-200">
+                 <div onClick={()=>{navigate(feature.link)}} className="border rounded p-4 border-stone-200 bg-stone-100 md:bg-stone-100 lg:bg-stone-100">
 
                   <div className='w-full h-40 overflow-hidden'>
                     <img className="w-full" src={feature.image} alt={feature.title} />
                   </div>
 
-                    <h3 className='text-xl font-bold mb-4'>{feature.title}</h3>
-                    <p>{feature.content}</p>
+                    <h3 className='text-xl font-bold mb-4 text-green-900'>{feature.title}</h3>
+                    <p className='text-stone-600'>{feature.content}</p>
                     
                  </div>
               )

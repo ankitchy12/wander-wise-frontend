@@ -7,7 +7,9 @@ import { Button } from '../components/ui/button'
 const Login = () => {
   return (
     <div>
-        <Card className={"w-1/4 mx-auto mt-30"}>
+        
+        <Card className={"flex flex-2 w-1/4 mx-auto mt-30"}>
+            {/* <img src='/heroImage2.jpg' alt='login image'></img> */}
             <CardHeader className={"border-b"}>
                 <CardTitle>Login to Wanderwise</CardTitle>
                 <CardDescription>Enter your credentials to access your account.</CardDescription>

@@ -14,6 +14,8 @@ import {
 import { Field, FieldError, FieldLabel } from "../components/ui/field";
 import { Input } from "../components/ui/input";
 import { Button } from "../components/ui/button";
+import api from "../api/axios";
+import { toast } from "sonner";
 
 const formSchema = z
   .object({
@@ -43,9 +45,28 @@ const Register = () => {
     },
   });
 
-  const onSubmit = (data) => {
-    console.log(data);
-  };
+  const onSubmit = async (data) => {
+        console.log(data);
+        
+        const { confirmPassword, ...newData } = data;
+
+        try {
+            
+            const response = await api.post("/auth/register", newData);
+
+            if (response.status === 201){
+                toast.success("Account created successfully");
+            }else{
+                toast.error( response.message || "Registration failed");
+            }
+
+        } catch (error) {
+            toast.error( "Some error occured");
+            console.log(error.message);
+        }
+
+    }
+
 
   return (
     <div className="w-full h-dvh bg-teal-900 pt-18">
@@ -162,7 +183,7 @@ const Register = () => {
           </Card>
         </form>
       </div>
-      </div>
+    </div>
   );
 };
 

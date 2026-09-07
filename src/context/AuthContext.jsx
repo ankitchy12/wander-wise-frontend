@@ -19,7 +19,7 @@ export const AuthProvider = ({children})=>{
         setToken(null);
         setUserData(null);
 
-        localStorage.removeItemItem("token");
+        localStorage.removeItem("token");
 
 
     }

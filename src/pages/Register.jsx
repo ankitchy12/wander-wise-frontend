@@ -16,6 +16,8 @@ import { Input } from "../components/ui/input";
 import { Button } from "../components/ui/button";
 import api from "../api/axios";
 import { toast } from "sonner";
+import { useNavigate } from "react-router-dom";
+import useAuth from "../hooks/useAuth";
 
 const formSchema = z
   .object({
@@ -35,6 +37,15 @@ const formSchema = z
   );
 
 const Register = () => {
+
+  const navigate = useNavigate();
+
+  const { token } = useAuth();
+  
+      if(token){
+          navigate("/dashboard");
+      }
+
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -56,6 +67,7 @@ const Register = () => {
 
             if (response.status === 201){
                 toast.success("Account created successfully");
+                navigate("/login");
             }else{
                 toast.error( response.message || "Registration failed");
             }
@@ -65,7 +77,7 @@ const Register = () => {
             console.log(error.message);
         }
 
-    }
+      }
 
 
   return (
@@ -188,3 +200,4 @@ const Register = () => {
 };
 
 export default Register;
+

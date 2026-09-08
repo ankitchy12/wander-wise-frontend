@@ -28,7 +28,7 @@ const Hero = () => {
                 
               </p>
 
-              <CustomButton text= 'Get Started' />
+              <CustomButton text= 'Get Started' link="/register"/>
               </div>
             </div>
         

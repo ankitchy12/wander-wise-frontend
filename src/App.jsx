@@ -12,6 +12,7 @@ import AppLayout from './layouts/AppLayout'
 import AddTrip from './pages/trips/AddTrip'
 import TripsDetails from './pages/trips/TripsDetails'
 import EditTrip from './pages/trips/EditTrip'
+import Trip from './pages/trips/Trip'
 
 const App = () => {
 
@@ -62,7 +63,7 @@ const App = () => {
 
         <Route path="/dashboard" element={<Dashboard />} />
 
-        <Route path="/trips" element={<AddTrip />} />
+        <Route path="/trips" element={<Trip />} />
         <Route path="/trips/add" element={<AddTrip />} />
         <Route path="/trips/:id" element={<TripsDetails />} />
         <Route path="/trips/edit/:id" element={<EditTrip />} />

@@ -128,10 +128,14 @@ const Login = () => {
                 />
               </CardContent>
 
-              <CardFooter>
+              <CardFooter className={"flex flex-col"}>
                 <Button type="submit">Login</Button>
+
+                <p>Don't have an accaount? <a href='/register'>Register</a> </p>
               </CardFooter>
             </Card>
+
+            
           </form>
         </div>
       </div>

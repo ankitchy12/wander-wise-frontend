@@ -45,7 +45,7 @@ const TripDetails = () => {
           
           <ExpenseForm trip={trip} />
 
-          <InviteForm />
+          <InviteForm trip={trip} />
 
       </div>
 

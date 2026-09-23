@@ -38,7 +38,7 @@ const InviteForm = ({trip}) => {
         console.log(data);
 
         try{
-            const response = await api.patch(`/trips/${trip._id/invite}`, {collaboratorEmails});
+            const response = await api.post(`/trips/${trip._id}/invite`, {collaboratorEmails:data.collaborators});
 
             if (response.status === 200){
                 toast.success("Invited successfully");
@@ -68,7 +68,7 @@ const InviteForm = ({trip}) => {
                         fields.map((field, index)=> {
                             return (
                                 <Controller
-                        name={"collaborators.${index}"}
+                        name={`collaborators.${index}`}
                         control={form.control}
                         render={({ field, fieldState }) => (
                             <Field data-invalid={fieldState.invalid}>

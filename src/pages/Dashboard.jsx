@@ -111,7 +111,7 @@ const Dashboard = () => {
                     {[...trips].sort((a, b) => new Date(a.startDate) - new Date(b.startDate)).map((trip) => {
                       const status = statusStyles[getTripStatus(trip)]
                       return (
-                        <a href={`/trips/${trip._id}`} key={trip._id} className="group relative flex gap-4 pl-1">
+                        <a href={`/trips/${trip._id}/view`} key={trip._id} className="group relative flex gap-4 pl-1">
                           <span className="z-10 mt-1.5 size-3 shrink-0 rounded-full border-2 border-white bg-purple-600 ring-1 ring-purple-300" />
                           <div className="min-w-0 flex-1 rounded-lg border p-4 transition-colors group-hover:border-purple-300 group-hover:bg-purple-50/50">
                             <div className="flex flex-wrap items-start justify-between gap-2"><h3 className="font-semibold">{trip.title}</h3><Badge className={status.className}>{status.label}</Badge></div>
